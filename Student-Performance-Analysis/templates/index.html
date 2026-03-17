@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Career Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<div class="container">
+<body>
+
+<div class="container">
+    <h1 class="main-title"> Career Path Prediction</h1>
+
+    <form action="/predict" method="post">
+
+        <label>Student Name</label>
+        <input type="text" name="name" required>
+
+        <label>Maths Marks</label>
+        <input type="number" name="maths" required>
+
+        <label>Science Marks</label>
+        <input type="number" name="science" required>
+
+        <label>English Marks</label>
+        <input type="number" name="english" required>
+
+        <label>Computer Marks</label>
+        <input type="number" name="computer">
+
+        <label>Economics Marks</label>
+        <input type="number" name="economics">
+
+        <label>Creativity (1-10)</label>
+        <input type="number" name="creativity" min="1" max="10">
+
+        <label>Communication (1-10)</label>
+        <input type="number" name="communication" min="1" max="10">
+
+
+        <label>Interest</label>
+        <select name="interest">
+            <option>Technology</option>
+            <option>Medical</option>
+            <option>Management</option>
+            <option>Arts</option>
+            <option>Commerce</option>
+            <option>teaching</option>
+            <option>acting</option>
+            <option>journalism</option>
+            <option>business</option>
+        </select>
+
+        <button type="submit">Predict Career</button>
+    </form>
+</div>
+
+</body>
+</div>
+</html>
